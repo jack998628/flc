@@ -1,0 +1,1 @@
+<view class="data-v-57280228"><search vue-id="8dd740cc-1" title="{{title}}" data-event-opts="{{[['^getCity',[['getCity']]]]}}" bind:getCity="__e" class="data-v-57280228" bind:__l="__l"></search><block wx:if="{{TimeList.length!=0}}"><dataformat vue-id="8dd740cc-2" TimeList="{{TimeList}}" class="data-v-57280228" bind:__l="__l"></dataformat></block></view>

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "项目列表",
+  "usingComponents": {
+    "jkfilter": "/components/jk-filterbar/index"
+  }
+}

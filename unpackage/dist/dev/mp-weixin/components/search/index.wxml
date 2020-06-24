@@ -1,0 +1,1 @@
+<view class="data-v-0f7112e6"><view class="nav_wrap data-v-0f7112e6">{{''+title+''}}</view><button type="default" data-event-opts="{{[['tap',[['push',['$event']]]]]}}" bindtap="__e" class="data-v-0f7112e6">查看</button></view>

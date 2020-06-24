@@ -1,0 +1,22 @@
+{
+	"pages": [{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "房链城"
+			}
+		},
+		{
+				"path": "pages/housesList/housesList",
+				"style": {
+					"navigationBarTitleText": "项目列表"
+				}
+			}
+	
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "房链城",
+		"navigationBarBackgroundColor": "#00CD66",
+		"backgroundColor": "#eee"
+	}
+}
