@@ -104,11 +104,11 @@
 /******/
 /******/
 /******/ 		// mini-css-extract-plugin CSS loading
-/******/ 		var cssChunks = {"components/dataformat/index":1,"components/jk-filterbar/index":1};
+/******/ 		var cssChunks = {"components/search/index":1,"components/dataformat/index":1,"components/jk-filterbar/index":1,"components/jk-map/index":1};
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "" + ({"components/dataformat/index":"components/dataformat/index","components/search/index":"components/search/index","components/jk-filterbar/index":"components/jk-filterbar/index"}[chunkId]||chunkId) + ".wxss";
+/******/ 				var href = "" + ({"components/search/index":"components/search/index","components/dataformat/index":"components/dataformat/index","components/jk-filterbar/index":"components/jk-filterbar/index","components/jk-map/index":"components/jk-map/index"}[chunkId]||chunkId) + ".wxss";
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {

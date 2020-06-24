@@ -24,12 +24,109 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.Countdown.data-v-57280228 {
-  width: 100%;
-}
-.wrap.data-v-57280228 {
+.s_wrap.data-v-57280228 {
+  padding: 0 20rpx;
+  box-sizing: border-box;
   width: 100%;
   height: 300rpx;
-  background-color: pink;
+}
+.s_wrap swiper.data-v-57280228 {
+  width: 100%;
+  height: 100%;
+}
+.s_wrap swiper-item.data-v-57280228 {
+  width: 100%;
+  height: 100%;
+  border-radius: 10rpx;
+}
+.s_wrap swiper-item image.data-v-57280228 {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+.m_wrap.data-v-57280228 {
+  margin-top: 20rpx;
+  width: 100%;
+  background-color: #fff;
+}
+.m_wrap .menu.data-v-57280228 {
+  padding: 40rpx 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-around;
+          justify-content: space-around;
+}
+.m_wrap .menu .item.data-v-57280228 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  font-size: 32rpx;
+}
+.m_wrap .menu .item image.data-v-57280228 {
+  width: 100rpx;
+  height: 80rpx;
+  padding-bottom: 15rpx;
+}
+.title.data-v-57280228 {
+  margin-top: 20rpx;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+}
+.title .news.data-v-57280228 {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #FC834D;
+}
+.title .contant.data-v-57280228 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  font-size: 32rpx;
+  color: #839fba;
+  margin-left: 20rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.y_wrap.data-v-57280228 {
+  width: 100%;
+  background-color: #fff;
+}
+.y_wrap .title.data-v-57280228 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  font-size: 34rpx;
+  font-weight: bold;
+  padding: 20rpx 20rpx;
+  box-sizing: border-box;
+}
+.y_wrap .title .more.data-v-57280228 {
+  font-size: 30rpx;
+  color: #ccc;
 }
 

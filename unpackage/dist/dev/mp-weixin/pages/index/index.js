@@ -135,7 +135,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var Search = function Search() {__webpack_require__.e(/*! require.ensure | components/search/index */ "components/search/index").then((function () {return resolve(__webpack_require__(/*! ../../components/search/index.vue */ 19));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var Dataformat = function Dataformat() {__webpack_require__.e(/*! require.ensure | components/dataformat/index */ "components/dataformat/index").then((function () {return resolve(__webpack_require__(/*! ../../components/dataformat/index.vue */ 24));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var Search = function Search() {Promise.all(/*! require.ensure | components/search/index */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/search/index")]).then((function () {return resolve(__webpack_require__(/*! ../../components/search/index.vue */ 19));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var Dataformat = function Dataformat() {__webpack_require__.e(/*! require.ensure | components/dataformat/index */ "components/dataformat/index").then((function () {return resolve(__webpack_require__(/*! ../../components/dataformat/index.vue */ 24));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};
 
 
 
@@ -156,38 +156,91 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
-{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 引入通告栏组件
+// import uniNoticeBar from '../../components/uni-notice-bar/uni-notice-bar.vue'
+var _default = {
   data: function data() {
     return {
-      title: "苏州",
-      time: 1592894986673,
-      timer: '',
-      //活动倒计时
-      formatDown: [
-      new Date("2020/6/25 12:00:00"),
-      new Date("2020/6/25 13:30:00"),
-      new Date("2020/6/25 14:50:00")],
-
-      TList: '',
-      TimeList: [] };
-
+      title: "苏州"
+      // timer: '',
+      // //活动倒计时
+      // formatDown: [
+      // 	new Date("2020/6/25 12:00:00"), 
+      // 	new Date("2020/6/25 13:30:00"), 
+      // 	new Date("2020/6/25 14:50:00")
+      // 	],
+      // TList: '',
+      // TimeList:[]
+    };
   },
-  onLoad: function onLoad() {var _this2 = this;
+  onLoad: function onLoad() {
     // 加载倒计时
-    this.timer = setInterval(function () {
-      _this2.Timeformat();
-    }, 1000);
+    // this.timer =  setInterval(() => {
+    // 	this.Timeformat();
+    // }, 1000)
   },
   // 卸载定时器
   onUnload: function onUnload() {
-    if (this.timer) {
-      clearInterval(this.timer);
-      this.timer = null;
-    }
+    // if (this.timer) {
+    // 	clearInterval(this.timer);
+    // 	this.timer = null;
+    // }
   },
   components: {
     Search: Search,
     Dataformat: Dataformat },
+
 
   methods: {
     // 获取楼栋的坐标
@@ -196,49 +249,50 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     },
     getCity: function getCity(city) {
       console.log(city);
-    },
-    // 时间倒计时
-    Timeformat: function Timeformat() {var _this3 = this;
-      var _this = this;
-      _this.formatDown.forEach(function (itme, idx) {
-        var start = new Date();
-        var t_time = _this3.Diff(start, itme);
-        _this.totaltime(t_time);
-        _this.TimeList[idx] = _this.TList;
-      });
+    }
+    // // 时间倒计时
+    // Timeformat() {
+    // 	let _this = this
+    // 	_this.formatDown.forEach((itme,idx) => {
+    // 		let start = new Date();
+    // 		let t_time = this.Diff(start, itme);
+    // 		_this.totaltime(t_time)
+    // 		_this.TimeList[idx] = _this.TList;
+    // 	})
 
-    },
-    // 计算时间差
-    Diff: function Diff(start, end) {
-      return (end.getTime() - start.getTime()) / 1000;
-    },
-    // 计算单个剩余时间
-    totaltime: function totaltime(a) {//计算单个剩余时间
-      var totaltime = a;
-      var _this = this;
-      var h, m, s;
-      if (totaltime > 0) {
-        h = parseInt(totaltime / 3600);
-        m = parseInt(totaltime % 3600 / 60);
-        s = parseInt(totaltime % 60);
-        //获取时分秒
-        h = _this.toTwo(h);
-        m = _this.toTwo(m);
-        s = _this.toTwo(s);
-        // 每个倒计时的时间显示格式
-        return _this.TList = {
-          h: h,
-          m: m,
-          s: s };
-
-      } else {
-        return _this.TList = "00 : 00 : 00";
-      }
-    },
-    // 双数
-    toTwo: function toTwo(num) {
-      return num < 10 ? "0" + num : num;
-    } } };exports.default = _default;
+    // },
+    // // 计算时间差
+    // Diff(start, end) {
+    // 	return (end.getTime() - start.getTime()) / 1000
+    // },
+    // // 计算单个剩余时间
+    // totaltime(a) { //计算单个剩余时间
+    // 	let totaltime = a
+    // 	let _this = this
+    // 	var h, m, s
+    // 	if (totaltime > 0) {
+    // 		h = parseInt(totaltime / 3600);
+    // 		m = parseInt(totaltime % 3600 / 60);
+    // 		s = parseInt(totaltime % 60);
+    // 		//获取时分秒
+    // 		h = _this.toTwo(h)
+    // 		m = _this.toTwo(m)
+    // 		s = _this.toTwo(s)
+    // 		// 每个倒计时的时间显示格式
+    // 		return _this.TList = {
+    // 			h,
+    // 			m,
+    // 			s
+    // 		} 
+    // 	} else {
+    // 		return _this.TList = `00 : 00 : 00`
+    // 	}
+    // },
+    // // 双数
+    // toTwo(num) {
+    // 	return num < 10 ? "0" + num : num;
+    // }
+  } };exports.default = _default;
 
 /***/ }),
 /* 17 */

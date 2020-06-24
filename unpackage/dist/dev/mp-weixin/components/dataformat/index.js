@@ -126,16 +126,78 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 //
 var _default =
 {
-  props: ['TimeList'],
   data: function data() {
-    return {};
+    return {
+      timer: '',
+      //活动倒计时
+      formatDown: [
+      new Date("2020/6/25 12:00:00"),
+      new Date("2020/6/25 13:30:00"),
+      new Date("2020/6/25 14:50:00")],
 
+      TList: '',
+      TimeList: [] };
 
+  },
+  created: function created() {
+    // 加载倒计时
+    // this.timer = setInterval(() => {
+    // 	this.Timeformat();
+    // }, 1000)
   },
   mounted: function mounted() {
     console.log(this.TimeList);
   },
-  methods: {} };exports.default = _default;
+  methods: {
+    // 时间倒计时
+    Timeformat: function Timeformat() {var _this2 = this;
+      var _this = this;
+      _this.formatDown.forEach(function (itme, idx) {
+        var start = new Date();
+        var t_time = _this2.Diff(start, itme);
+        _this.totaltime(t_time);
+        _this.TimeList[idx] = _this.TList;
+      });
+
+    },
+    // 计算时间差
+    Diff: function Diff(start, end) {
+      return (end.getTime() - start.getTime()) / 1000;
+    },
+    // 计算单个剩余时间
+    totaltime: function totaltime(a) {//计算单个剩余时间
+      var totaltime = a;
+      var _this = this;
+      var h, m, s;
+      if (totaltime > 0) {
+        h = parseInt(totaltime / 3600);
+        m = parseInt(totaltime % 3600 / 60);
+        s = parseInt(totaltime % 60);
+        //获取时分秒
+        h = _this.toTwo(h);
+        m = _this.toTwo(m);
+        s = _this.toTwo(s);
+        // 每个倒计时的时间显示格式
+        return _this.TList = {
+          h: h,
+          m: m,
+          s: s };
+
+      } else {
+        return _this.TList = "00 : 00 : 00";
+      }
+    },
+    // 双数
+    toTwo: function toTwo(num) {
+      return num < 10 ? "0" + num : num;
+    } },
+
+  destroyed: function destroyed() {
+    if (this.timer) {
+      clearInterval(this.timer);
+      this.timer = null;
+    }
+  } };exports.default = _default;
 
 /***/ }),
 

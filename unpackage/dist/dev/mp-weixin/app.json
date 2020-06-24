@@ -1,13 +1,14 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/housesList/housesList"
+    "pages/housesList/housesList",
+    "pages/housesDetails/housesDetails"
   ],
   "subPackages": [],
   "window": {
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "房链城",
-    "navigationBarBackgroundColor": "#00CD66",
+    "navigationBarBackgroundColor": "#52B4B4",
     "backgroundColor": "#eee"
   },
   "usingComponents": {}

@@ -15,7 +15,8 @@
 			</view>
 		</view>
 
-		<view catchtouchmove='ture' class="area" v-show="dire&&active==1" @tap="dire=false">
+		<view catchtouchmove='ture' class="area" v-show="dire&&active==1">
+			<view class="cover" @tap="dire=false"></view>
 			<view class="list">
 				<view class="item">
 					<text>不限</text>
@@ -49,7 +50,8 @@
 			</view>
 		</view>
 
-		<view catchtouchmove='ture' class="area" v-show="dire&&active==2" @tap="dire=false">
+		<view catchtouchmove='ture' class="area" v-show="dire&&active==2">
+			<view class="cover" @tap="dire=false"></view>
 			<view class="list">
 				<view class="item">
 					<text>不限</text>
@@ -84,8 +86,8 @@
 		</view>
 
 
-		<view catchtouchmove='ture' class="area" v-show="dire&&active==3" @tap="dire=false">
-
+		<view catchtouchmove='ture' class="area" v-show="dire&&active==3">
+			<view class="cover" @tap="dire=false"></view>
 			<view class="list">
 				<view class="item">
 					<text>不限</text>
@@ -169,14 +171,22 @@
 
 	// 区域筛选列表
 	.area {
-		z-index: -2;
+		position: relative;
 		width: 100%;
-		height: 3000rpx;
-		background-color: #2d2d2d;
 		transition: height .2s ease;
 
+		.cover {
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 3000rpx;
+			background-color: #2d2d2d;
+		}
+
 		.list {
-			z-index: 9999;
+			z-index: 999;
 			width: 100%;
 			box-sizing: border-box;
 			background-color: #fff;
@@ -197,12 +207,12 @@
 		}
 
 		.b_wrap {
-			padding-top: 20rpx;
+			padding: 20rpx 0;
 			display: flex;
 			justify-content: space-between;
 			width: 100%;
 			background-color: #fff;
-
+             
 			.cancel {
 				display: flex;
 				width: 48%;
