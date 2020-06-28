@@ -4,38 +4,13 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": false,
-		"es6": true,
-		"enhance": false,
-		"postcss": true,
-		"preloadBackgroundData": false,
-		"minified": true,
-		"newFeature": false,
-		"coverView": true,
-		"nodeModules": false,
-		"autoAudits": false,
-		"showShadowRootInWxmlPanel": true,
-		"scopeDataCheck": false,
-		"uglifyFileName": false,
-		"checkInvalidKey": true,
-		"checkSiteMap": true,
-		"uploadWithSourceMap": true,
-		"compileHotReLoad": false,
-		"babelSetting": {
-			"ignore": [],
-			"disablePlugins": [],
-			"outputPath": ""
-		},
-		"useIsolateContext": true,
-		"useCompilerModule": false,
-		"userConfirmedUseCompilerModuleSwitch": false
+		"urlCheck": true,
+		"es6": true
 	},
 	"compileType": "miniprogram",
 	"libVersion": "",
 	"appid": "wxbdc7e8b6ec3c3267",
 	"projectname": "flc",
-	"simulatorType": "wechat",
-	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,
@@ -64,6 +39,20 @@
 					"id": -1,
 					"name": "pages/mapDetails/mapDetails",
 					"pathName": "pages/mapDetails/mapDetails",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/housesList/housesList",
+					"pathName": "pages/housesList/housesList",
 					"scene": null
 				}
 			]

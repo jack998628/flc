@@ -53,15 +53,15 @@
 
 			<!-- 轮播指示器 -->
 			<view :class="['left',  Leftactive? 'disabled' : '']" @tap="left">
-				<uniIcons type="arrowleft" size="15" color="#fff"> </uniIcons>
+				<text class="icon iconfont iconxiangzuo"> </text>
 			</view>
 			<view :class="['right',  Rightactive? 'disabled' : '']" @tap="right">
-				<uniIcons type="arrowright" size="15" color="#fff"> </uniIcons>
+				<text class="icon iconfont iconyou1"> </text>
 			</view>
 
 			<view class="title">
 				<text>优惠楼盘</text>
-				<text class="more">>>></text>
+				<text class="icon iconfont icongengduo1"></text>
 			</view>
 
 			<!-- 优惠楼盘轮播 -->
@@ -203,7 +203,7 @@
 		<view class="r_wrap">
 			<view class="title">
 				<view class="left">团购优惠</view>
-				<view class="right">》</view>
+				<text class="icon iconfont icongengduo1"></text>
 			</view>
 
 			<!-- 团购列表 -->
@@ -243,28 +243,28 @@
 							</view>
 						</view>
 					</view>
-                       <view class="buttom">
-						   <view class="left">
-							   <text class="yh">成团优惠：</text>
-							   <text class="tg">1万抵3万/5人成团</text>
-						   </view>
-						    <view class="right">
-								<text>仅剩:</text>
-								<Dataformat :Countdown="Countdown"></Dataformat>
-							</view>
-					   </view>
+					<view class="buttom">
+						<view class="left">
+							<text class="yh">成团优惠：</text>
+							<text class="tg">1万抵3万/5人成团</text>
+						</view>
+						<view class="right">
+							<text>仅剩:</text>
+							<Dataformat :Countdown="Countdown"></Dataformat>
+						</view>
+					</view>
 				</view>
-				
-				
-				
+
+
+
 				<view class="item">
 					<view class="content">
 						<view class="image">
 							<image src="https://ke-image.ljcdn.com/newhouse-user-image/2b9ce7b18bda2ce5f7b5630687927040.jpg.315x240.jpg"
 							 mode="widthFix"></image>
-							 <view class="tag disabled">
-							 	已结束
-							 </view>
+							<view class="tag disabled">
+								已结束
+							</view>
 						</view>
 						<view class="info">
 							<view class="title">
@@ -284,39 +284,39 @@
 									学区房
 								</view>
 							</view>
-				
+
 							<view class="price">
 								22500元/㎡
 							</view>
-				
+
 							<!-- 房屋地址 -->
 							<view class="address">
 								高新区 竹园路12号 | 建面127-150/㎡
 							</view>
 						</view>
 					</view>
-				       <view class="buttom">
-						   <view class="left">
-							   <text class="yh">成团优惠：</text>
-							   <text class="tg">1万抵3万/5人成团</text>
-						   </view>
-						    <view class="right">
-								<text>仅剩:</text>
-								<Dataformat :Countdown="Countdown"></Dataformat>
-							</view>
-					   </view>
+					<view class="buttom">
+						<view class="left">
+							<text class="yh">成团优惠：</text>
+							<text class="tg">1万抵3万/5人成团</text>
+						</view>
+						<view class="right">
+							<text>仅剩:</text>
+							<Dataformat :Countdown="Countdown"></Dataformat>
+						</view>
+					</view>
 				</view>
-				
-				
-				
+
+
+
 				<view class="item">
 					<view class="content">
 						<view class="image">
 							<image src="https://ke-image.ljcdn.com/newhouse-user-image/2b9ce7b18bda2ce5f7b5630687927040.jpg.315x240.jpg"
 							 mode="widthFix"></image>
-							 <view class="tag out">
-							 	已售罄
-							 </view>
+							<view class="tag out">
+								已售罄
+							</view>
 						</view>
 						<view class="info">
 							<view class="title">
@@ -336,27 +336,27 @@
 									学区房
 								</view>
 							</view>
-				
+
 							<view class="price">
 								22500元/㎡
 							</view>
-				
+
 							<!-- 房屋地址 -->
 							<view class="address">
 								高新区 竹园路12号 | 建面127-150/㎡
 							</view>
 						</view>
 					</view>
-				       <view class="buttom">
-						   <view class="left">
-							   <text class="yh">成团优惠：</text>
-							   <text class="tg">1万抵3万/5人成团</text>
-						   </view>
-						    <view class="right">
-								<text>仅剩:</text>
-								<Dataformat :Countdown="Countdown"></Dataformat>
-							</view>
-					   </view>
+					<view class="buttom">
+						<view class="left">
+							<text class="yh">成团优惠：</text>
+							<text class="tg">1万抵3万/5人成团</text>
+						</view>
+						<view class="right">
+							<text>仅剩:</text>
+							<Dataformat :Countdown="Countdown"></Dataformat>
+						</view>
+					</view>
 				</view>
 			</view>
 		</view>
@@ -372,7 +372,9 @@
 	// 引入倒计时组件
 	import Dataformat from '../../components/dataformat/index.vue';
 	// 引入字体图标
-	import uniIcons from "../../components/uni-icons/uni-icons.vue"
+	import uniIcons from "../../components/uni-icons/uni-icons.vue";
+	// 引入字体图标库
+	import '../../static/font_1895569_k7ithb23iil/iconfont.css'
 	export default {
 		data() {
 			return {
@@ -381,7 +383,7 @@
 				Leftactive: false,
 				//活动倒计时
 				Countdown: [
-					"2020-6-30 12:00:00",
+					"2020-7-10 12:00:00",
 				],
 			}
 		},
@@ -458,7 +460,8 @@
 		margin-top: 20rpx;
 		width: 100%;
 		box-sizing: none;
-        background-color: #fff;
+		background-color: #fff;
+
 		.menu {
 			padding: 30rpx 0;
 			display: flex;
@@ -529,6 +532,11 @@
 			left: 36rpx;
 			margin-top: -40rpx;
 			background-color: #B2F3F4;
+			color: #fff;
+
+			.icon {
+				font-size: 50rpx;
+			}
 		}
 
 		.disabled {
@@ -548,6 +556,11 @@
 			right: 36rpx;
 			margin-top: -40rpx;
 			background-color: #B2F3F4;
+			color: #fff;
+
+			.icon {
+				font-size: 50rpx;
+			}
 		}
 
 		// 优惠楼盘标题
@@ -560,8 +573,8 @@
 			padding: 20rpx 20rpx;
 			box-sizing: border-box;
 
-			.more {
-				font-size: 30rpx;
+			.icon {
+				font-size: 40rpx;
 				color: #ccc;
 			}
 		}
@@ -706,7 +719,8 @@
 				font-size: 34rpx;
 			}
 
-			.right {
+			.icon {
+				font-size: 40rpx;
 				color: #ccc;
 			}
 		}
@@ -720,22 +734,25 @@
 				padding: 30rpx 0;
 				border-bottom: 1px solid #ccc;
 				width: 100%;
-
+                &:last-child{
+					border: none;
+				}
 				.content {
 					width: 100%;
 					display: flex;
 					justify-content: space-between;
-					
+
 
 					.image {
 						position: relative;
 						width: 30%;
-                        
+
 						image {
 							width: 100%;
 							height: 100%;
 						}
-						.tag{
+
+						.tag {
 							position: absolute;
 							font-size: 34rpx;
 							top: 10rpx;
@@ -743,13 +760,15 @@
 							color: #fff;
 							padding: 5rpx 10rpx;
 						}
-						.disabled{
+
+						.disabled {
 							background-color: #D3D6DB;
-							border-radius: 0  10rpx  10rpx 0;
+							border-radius: 0 10rpx 10rpx 0;
 						}
-						.out{
+
+						.out {
 							background-color: #F9523C;
-							border-radius: 0  10rpx  10rpx 0;
+							border-radius: 0 10rpx 10rpx 0;
 						}
 					}
 
@@ -771,7 +790,7 @@
 						.tags {
 							padding-bottom: 10rpx;
 							display: flex;
-							
+
 
 							.tag {
 								font-size: 30rpx;
@@ -803,8 +822,8 @@
 						}
 					}
 				}
-				
-				.buttom{
+
+				.buttom {
 					display: flex;
 					justify-content: space-between;
 					align-items: center;
@@ -812,17 +831,20 @@
 					margin-top: 20rpx;
 					padding: 15rpx 0;
 					background-color: #F6FAFD;
-					.left{
-						.yh{
+
+					.left {
+						.yh {
 							font-size: 30rpx;
-							color:#5D85A8;
+							color: #5D85A8;
 						}
-						.tg{
+
+						.tg {
 							font-size: 34rpx;
 							color: #FA4F37;
 						}
 					}
-					.right{
+
+					.right {
 						display: flex;
 						align-items: center;
 						color: #5D85A8;

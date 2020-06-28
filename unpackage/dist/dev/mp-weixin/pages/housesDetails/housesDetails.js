@@ -128,19 +128,14 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var jkmap = function jkmap() {__webpack_require__.e(/*! require.ensure | components/jk-map/index */ "components/jk-map/index").then((function () {return resolve(__webpack_require__(/*! ../../components/jk-map/index.vue */ 62));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};
-
-
-
-
-
-
-
-
-
-// 引入地图api
-var QQMapWX = __webpack_require__(/*! ../../api/qqmap-wx-jssdk.js */ 31);
-var qqmapsdk;var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+//
+//
+//
+//
+//
+//
+var _default =
 {
   data: function data() {
     return {};
@@ -148,23 +143,12 @@ var qqmapsdk;var _default =
 
   },
   created: function created() {
-    qqmapsdk = new QQMapWX({
-      key: 'JFRBZ-Z7PWP-JIXDQ-VMCRI-7NORT-CZFPX' });
 
   },
   mounted: function mounted() {
-    qqmapsdk.search({
-      keyword: '医院',
-      success: function success(res) {
-        console.log(res);
-      },
-      fail: function fail(res) {
-        console.log(res);
-      } });
 
   },
-  components: {
-    jkmap: jkmap } };exports.default = _default;
+  components: {} };exports.default = _default;
 
 /***/ })
 

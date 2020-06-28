@@ -1,6 +1,6 @@
 <template>
 	<view class="wrap">
-		<map :latitude="address.latitude" :longitude="address.longitude" :markers="markers"></map>
+		<map :show-compass="true" :latitude="address.latitude" :longitude="address.longitude" :markers="markers"></map>
 		<!-- 分类选择 -->
 		<view class="menu">
 			<view class="tags">

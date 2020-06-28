@@ -4,13 +4,13 @@
 		<view class="s_wrap">
 			<view class="search">
 				<view class="city">
-					<view class="icon iconfont icon-location"></view>
+					<view class="icon iconfont iconlocation"></view>
 					<text class="title">苏州</text>
-					<view class="icon iconfont icon-sanjiaoxing"></view>
+					<view class="icon iconfont iconxiala"></view>
 				</view>
 
 				<view class="search_ipt">
-					<view class="icon iconfont icon-sousuo"></view>
+					<view class="icon iconfont iconsousuo"></view>
 					<text>你想住在哪</text>
 				</view>
 			</view>
@@ -20,7 +20,7 @@
 
 <script>
 	// 导入字体图标
-	import '../../static/font_ecthwhhpd1t/iconfont.css'
+	import '../../static/font_1895569_k7ithb23iil/iconfont.css'
 	export default {
 		data() {
 			return {
@@ -56,16 +56,16 @@
 				align-items: center;
 				border-right: 1rpx solid #ccc;
 
-				.icon-location {
+				.iconlocation {
 					color: #52B4B3;
-
+					font-size: 50rpx;
 				}
 
 				.title {
 					padding: 0 13rpx;
 				}
 
-				.icon-sanjiaoxing {
+				.iconxiala {
 					color: #ccc;
 				}
 			}
@@ -77,6 +77,9 @@
 				align-items: center;
 				justify-content: center;
 				color: #ccc;
+				.iconsousuo{
+					color: #ccc;
+				}
 			}
 		}
 	}

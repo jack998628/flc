@@ -12,6 +12,12 @@
 			}
 		},
 		{
+			"path": "pages/My/My",
+			"style": {
+				"navigationBarTitleText": "个人中心"
+			}
+		},
+		{
 			"path": "pages/housesDetails/housesDetails",
 			"style": {
 				"navigationBarTitleText": "项目详情"
@@ -30,5 +36,29 @@
 		"navigationBarTitleText": "房链城",
 		"navigationBarBackgroundColor": "#52B4B4",
 		"backgroundColor": "#eee"
+	},
+	"tabBar": {
+		"color": "#B4B4B4",
+		"selectedColor": "#52B4B4",
+		"borderStyle": "black",
+		"backgroundColor": "#fff",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"text": "首页",
+				"iconPath": "static/images/daohangshouye.png",
+				"selectedIconPath": "static/images/首页xz.png"
+			},
+			{
+				"pagePath": "pages/housesList/housesList",
+				"text": "聊天",
+				"iconPath": "static/images/liaotian.png",
+				"selectedIconPath": "static/images/聊天xz.png"
+			}, {
+				"pagePath": "pages/My/My",
+				"text": "我的",
+				"iconPath": "static/images/ziyuan.png",
+				"selectedIconPath": "static/images/我的zx.png"
+			}
+		]
 	}
 }

@@ -3,15 +3,15 @@
 		<view class="nav_wrap">
 			<view class="item" @tap.stop="showFilter(1)">
 				<text :class="[ dire&&active==1? 'text' : '']">区域</text>
-				<view :class="['icon iconfont icon-sanjiaoxing',dire&&active==1? 'bg' : '']"></view>
+				<view :class="['icon iconfont iconxiala',dire&&active==1? 'bg' : '']"></view>
 			</view>
 			<view class="item" @tap.stop="showFilter(2)">
 				<text :class="[ dire&&active==2? 'text' : '']">价格</text>
-				<view :class="['icon iconfont icon-sanjiaoxing',dire&&active==2? 'bg' : '']"></view>
+				<view :class="['icon iconfont iconxiala',dire&&active==2? 'bg' : '']"></view>
 			</view>
 			<view class="item" @tap.stop="showFilter(3)">
 				<text :class="[ dire&&active==3? 'text' : '']">其他</text>
-				<view :class="['icon iconfont icon-sanjiaoxing',dire&&active==3? 'bg' : '']"></view>
+				<view :class="['icon iconfont iconxiala',dire&&active==3? 'bg' : '']"></view>
 			</view>
 		</view>
 
@@ -117,7 +117,7 @@
 
 <script>
 	// 导入字体图标
-	import '../../static/font_ecthwhhpd1t/iconfont.css'
+	import '../../static/font_1895569_k7ithb23iil/iconfont.css'
 	export default {
 		data() {
 			return {

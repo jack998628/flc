@@ -135,7 +135,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var Search = function Search() {Promise.all(/*! require.ensure | components/search/index */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/search/index")]).then((function () {return resolve(__webpack_require__(/*! ../../components/search/index.vue */ 32));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var Dataformat = function Dataformat() {__webpack_require__.e(/*! require.ensure | components/dataformat/index */ "components/dataformat/index").then((function () {return resolve(__webpack_require__(/*! ../../components/dataformat/index.vue */ 40));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uniIcons = function uniIcons() {Promise.all(/*! require.ensure | components/uni-icons/uni-icons */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/uni-icons/uni-icons")]).then((function () {return resolve(__webpack_require__(/*! ../../components/uni-icons/uni-icons.vue */ 47));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
 
 
@@ -510,6 +510,8 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
+
+__webpack_require__(/*! ../../static/font_1895569_k7ithb23iil/iconfont.css */ 83);var Search = function Search() {__webpack_require__.e(/*! require.ensure | components/search/index */ "components/search/index").then((function () {return resolve(__webpack_require__(/*! ../../components/search/index.vue */ 44));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var Dataformat = function Dataformat() {__webpack_require__.e(/*! require.ensure | components/dataformat/index */ "components/dataformat/index").then((function () {return resolve(__webpack_require__(/*! ../../components/dataformat/index.vue */ 52));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uniIcons = function uniIcons() {Promise.all(/*! require.ensure | components/uni-icons/uni-icons */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/uni-icons/uni-icons")]).then((function () {return resolve(__webpack_require__(/*! ../../components/uni-icons/uni-icons.vue */ 59));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 {
   data: function data() {
     return {
@@ -518,7 +520,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
       Leftactive: false,
       //活动倒计时
       Countdown: [
-      "2020-6-30 12:00:00"] };
+      "2020-7-10 12:00:00"] };
 
 
   },
