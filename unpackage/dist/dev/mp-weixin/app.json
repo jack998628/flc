@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/housesList/housesList",
-    "pages/housesDetails/housesDetails"
+    "pages/housesDetails/housesDetails",
+    "pages/mapDetails/mapDetails"
   ],
   "subPackages": [],
   "window": {
@@ -11,6 +12,5 @@
     "navigationBarBackgroundColor": "#52B4B4",
     "backgroundColor": "#eee"
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap60.json"
+  "usingComponents": {}
 }

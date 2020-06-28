@@ -6,18 +6,24 @@
 			}
 		},
 		{
-				"path": "pages/housesList/housesList",
-				"style": {
-					"navigationBarTitleText": "项目列表"
-				}
-			},
-			{
-					"path": "pages/housesDetails/housesDetails",
-					"style": {
-						"navigationBarTitleText": "项目详情"
-					}
-				}
-	
+			"path": "pages/housesList/housesList",
+			"style": {
+				"navigationBarTitleText": "项目列表"
+			}
+		},
+		{
+			"path": "pages/housesDetails/housesDetails",
+			"style": {
+				"navigationBarTitleText": "项目详情"
+			}
+		},
+		{
+			"path": "pages/mapDetails/mapDetails",
+			"style": {
+				"navigationBarTitleText": "周边信息"
+			}
+		}
+
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
