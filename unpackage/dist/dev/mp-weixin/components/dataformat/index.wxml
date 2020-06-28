@@ -1,1 +1,1 @@
-<view class="data-v-352ae09f"></view>
+<view class="data-v-352ae09f"><block wx:for="{{TimeList}}" wx:for-item="itme" wx:for-index="__i0__" wx:key="*this"><block wx:if="{{TimeList.length!=0}}"><view class="tags data-v-352ae09f"><view class="tag data-v-352ae09f">{{itme.h}}</view><text class="data-v-352ae09f">:</text><view class="tag data-v-352ae09f">{{itme.m}}</view><text class="data-v-352ae09f">:</text><view class="tag data-v-352ae09f">{{itme.s}}</view></view></block></block></view>

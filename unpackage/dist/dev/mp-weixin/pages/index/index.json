@@ -2,6 +2,7 @@
   "navigationBarTitleText": "房链城",
   "usingComponents": {
     "search": "/components/search/index",
-    "dataformat": "/components/dataformat/index"
+    "dataformat": "/components/dataformat/index",
+    "uni-icons": "/components/uni-icons/uni-icons"
   }
 }

@@ -32,6 +32,13 @@
 }
 .tags .tag.data-v-352ae09f {
   color: #fff;
-  background-color: red;
+  background-color: #FA533D;
+  padding: 5rpx;
+  font-size: 30rpx;
+  border-radius: 5rpx;
+}
+.tags text.data-v-352ae09f {
+  color: #8e969f;
+  padding: 0 10rpx;
 }
 
