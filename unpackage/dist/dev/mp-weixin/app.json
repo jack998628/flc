@@ -4,7 +4,8 @@
     "pages/housesList/housesList",
     "pages/My/My",
     "pages/housesDetails/housesDetails",
-    "pages/mapDetails/mapDetails"
+    "pages/mapDetails/mapDetails",
+    "pages/news/news"
   ],
   "subPackages": [],
   "window": {
@@ -26,8 +27,8 @@
         "selectedIconPath": "static/images/首页xz.png"
       },
       {
-        "pagePath": "pages/housesList/housesList",
-        "text": "聊天",
+        "pagePath": "pages/news/news",
+        "text": "消息",
         "iconPath": "static/images/liaotian.png",
         "selectedIconPath": "static/images/聊天xz.png"
       },
@@ -39,5 +40,6 @@
       }
     ]
   },
-  "usingComponents": {}
+  "usingComponents": {},
+  "sitemapLocation": "sitemap33.json"
 }
