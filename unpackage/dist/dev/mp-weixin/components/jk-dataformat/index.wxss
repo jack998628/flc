@@ -24,46 +24,21 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.wrap.data-v-c454de34 {
-  height: 3000rpx;
-}
-.wrap .cover.data-v-c454de34 {
-  position: absolute;
-  left: 0;
-  top: 0;
+.tags.data-v-df600cf6 {
   width: 100%;
-  height: 100%;
-  background-color: #fff;
-}
-.wrap .nav.data-v-c454de34 {
-  position: fixed;
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-          justify-content: space-between;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
-  width: 100%;
-  height: 100rpx;
-  top: 100rpx;
-  background-color: pink;
-  -webkit-transition: opacity 1s ease;
-  transition: opacity 1s ease;
 }
-.wrap .nav .tag.data-v-c454de34 {
+.tags .tag.data-v-df600cf6 {
   color: #fff;
-  font-size: 36rpx;
+  background-color: #FA533D;
+  padding: 5rpx;
+  font-size: 30rpx;
+  border-radius: 5rpx;
 }
-.wrap .info.data-v-c454de34,
-.wrap .hx.data-v-c454de34,
-.wrap .Surr.data-v-c454de34,
-.wrap .broker.data-v-c454de34 {
-  padding-top: 200rpx;
-  box-sizing: border-box;
-  margin-top: 300rpx;
-  width: 100%;
+.tags text.data-v-df600cf6 {
+  color: #8e969f;
+  padding: 0 10rpx;
 }
 

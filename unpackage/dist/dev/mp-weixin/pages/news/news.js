@@ -130,49 +130,70 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var jkLoad = function jkLoad() {__webpack_require__.e(/*! require.ensure | components/jk-load/index */ "components/jk-load/index").then((function () {return resolve(__webpack_require__(/*! ../../components/jk-load/index.vue */ 101));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
   data: function data() {
     return {
       opacity: 0,
-      wrapTop: '' };
+      show: true,
+      timer: null };
 
   },
+  components: {
+    jkLoad: jkLoad },
+
   onLoad: function onLoad() {
 
   },
+  onShow: function onShow() {var _this2 = this;
+    this.timer = setTimeout(function () {
+      _this2.show = false;
+    }, 3000);
+  },
+  onHide: function onHide() {
+    clearInterval(this.timer);
+    this.show = true;
+  },
   methods: {
     onPageScroll: function onPageScroll(e) {
-      if (e.scrollTop >= 20) {
-        this.opacity += 0.1;
-      } else if (e.scrollTop < 100) {
-        this.opacity -= 0.5;
+      if (e.scrollTop >= 42) {
+        this.opacity = 1;
+      } else if (e.scrollTop < 42) {
+        this.opacity = 0;
       }
     },
+    // 锚点
     To: function To(key) {
       var _this = this;
       var Class = String;
@@ -190,19 +211,17 @@ var _default =
           Class = '.broker';
           break;}
 
-      this.fiter(Class);
-      uni.pageScrollTo({
-        scrollTop: _this.wrapTop,
-        duration: 300 });
-
+      _this.fiter(Class);
     },
     fiter: function fiter(Class) {
-      var _this = this;
       var query = uni.createSelectorQuery();
       query.select(Class).boundingClientRect();
       query.selectViewport().scrollOffset();
       query.exec(function (res) {
-        _this.wrapTop = res[0].top;
+        uni.pageScrollTo({
+          selector: Class,
+          duration: 300 });
+
       });
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))

@@ -1,10 +1,15 @@
 <template>
 	<view class="wrap">
+
+
 		<view class="nav" :style="{'opacity':opacity}">
 			<view class="tag" @tap="To('基本信息')">基本信息</view>
 			<view class="tag" @tap="To('户型图')">户型图</view>
 			<view class="tag" @tap="To('周边配套')">周边配套</view>
 			<view class="tag" @tap="To('经纪人')">经纪人</view>
+		</view>
+		<view v-if="show" class="cover">
+			<jk-load></jk-load>
 		</view>
 
 
@@ -23,24 +28,40 @@
 </template>
 
 <script>
+	// 引入加载动画
+	import jkLoad from '../../components/jk-load/index.vue'
 	export default {
 		data() {
 			return {
 				opacity: 0,
-				wrapTop: '',
+				show: true,
+				timer: null
 			}
+		},
+		components: {
+			jkLoad
 		},
 		onLoad() {
 
 		},
+		onShow() {
+			this.timer = setTimeout(() => {
+				this.show = false
+			}, 3000)
+		},
+		onHide() {
+			clearInterval(this.timer);
+			this.show = true;
+		},
 		methods: {
 			onPageScroll(e) {
-				if (e.scrollTop >= 20) {
-					this.opacity += 0.1;
-				} else if (e.scrollTop < 100) {
-					this.opacity -= 0.5;
+				if (e.scrollTop >= 42) {
+					this.opacity = 1
+				} else if (e.scrollTop < 42) {
+					this.opacity = 0
 				}
 			},
+			// 锚点
 			To(key) {
 				let _this = this;
 				let Class = String;
@@ -58,28 +79,36 @@
 						Class = '.broker';
 						break
 				}
-				this.fiter(Class)
-				uni.pageScrollTo({
-					scrollTop: _this.wrapTop,
-					duration: 300
-				});
+				_this.fiter(Class)
 			},
 			fiter(Class) {
-				let _this = this;
 				let query = uni.createSelectorQuery()
 				query.select(Class).boundingClientRect()
 				query.selectViewport().scrollOffset()
 				query.exec(function(res) {
-					_this.wrapTop = res[0].top
+					uni.pageScrollTo({
+						selector: Class,
+						duration: 300
+					});
 				})
 			}
 		}
 	}
 </script>
 
+
 <style scoped lang="scss">
 	.wrap {
 		height: 3000rpx;
+
+		.cover {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: #fff;
+		}
 
 		.nav {
 			position: fixed;
@@ -88,8 +117,9 @@
 			align-items: center;
 			width: 100%;
 			height: 100rpx;
-			top: 200rpx;
+			top: 100rpx;
 			background-color: pink;
+			transition: opacity 1s ease;
 
 			.tag {
 				color: #fff;
@@ -101,9 +131,10 @@
 		.hx,
 		.Surr,
 		.broker {
+			padding-top: 200rpx;
+			box-sizing: border-box;
+			margin-top: 300rpx;
 			width: 100%;
-			height: 300rpx;
-			background-color: #0086B3;
 		}
 	}
 </style>

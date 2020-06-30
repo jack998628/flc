@@ -370,7 +370,7 @@
 	//引入搜索组件
 	import Search from '../../components/search/index.vue';
 	// 引入倒计时组件
-	import Dataformat from '../../components/dataformat/index.vue';
+	import Dataformat from '../../components/jk-dataformat/index.vue';
 	// 引入字体图标
 	import uniIcons from "../../components/uni-icons/uni-icons.vue";
 	// 引入字体图标库
@@ -734,9 +734,11 @@
 				padding: 30rpx 0;
 				border-bottom: 1px solid #ccc;
 				width: 100%;
-                &:last-child{
+
+				&:last-child {
 					border: none;
 				}
+
 				.content {
 					width: 100%;
 					display: flex;
