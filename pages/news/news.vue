@@ -8,7 +8,7 @@
 			<view class="tag" @tap="To('周边配套')">周边配套</view>
 			<view class="tag" @tap="To('经纪人')">经纪人</view>
 		</view>
-		<view v-if="show" class="cover">
+		<view  catchtouchmove="true" v-if="show" class="cover">
 			<jk-load></jk-load>
 		</view>
 
@@ -24,18 +24,33 @@
 
 
 		<view class="broker">我是经纪人</view>
+
+
+
+
+		<button type="default" @tap="fd">防抖</button>
+		
+		
+		<input type="text" v-model="ipt" />
+		<input type="text" v-model="strName" />
 	</view>
 </template>
 
 <script>
 	// 引入加载动画
-	import jkLoad from '../../components/jk-load/index.vue'
+	import jkLoad from '../../components/jk-load/index.vue';
+	// 引入防抖函数
+	import {
+		debounce
+	} from '../../utils/shake.js'
 	export default {
 		data() {
 			return {
 				opacity: 0,
 				show: true,
-				timer: null
+				timer: null,
+				ipt:'',
+				
 			}
 		},
 		components: {
@@ -47,7 +62,7 @@
 		onShow() {
 			this.timer = setTimeout(() => {
 				this.show = false
-			}, 3000)
+			}, 2000)
 		},
 		onHide() {
 			clearInterval(this.timer);
@@ -91,8 +106,22 @@
 						duration: 300
 					});
 				})
+			},
+			fd:debounce(function(){
+				console.log("111111");
+			},2000)
+		},
+		computed:{
+			strName(){
+				return this.ipt + "1234567";
 			}
-		}
+		},
+		watch:{
+			ipt(newV,oldV){
+				console.log(newV,oldV)
+			}
+		},
+	
 	}
 </script>
 

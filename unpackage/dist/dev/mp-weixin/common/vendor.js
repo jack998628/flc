@@ -8571,7 +8571,35 @@ if (hadRuntime) {
 
 /***/ }),
 
-/***/ 80:
+/***/ 59:
+/*!*********************************!*\
+  !*** D:/flc/flc/utils/shake.js ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.debounce = debounce; // 防抖操作避免用户平凡操作
+function debounce(fnc, delay) {
+  var done = 1; //记录是否可执行
+  return function () {
+    if (done) {
+      fnc.apply(this, arguments);
+      done = 0; //执行后置为不可执行
+      setTimeout(function () {//计时结束后再置为可执行
+        done = 1;
+      }, delay);
+    }
+  };
+}
+
+// 验证码1分钟限制
+
+// 导出函数
+
+/***/ }),
+
+/***/ 81:
 /*!************************************************!*\
   !*** D:/flc/flc/components/uni-icons/icons.js ***!
   \************************************************/
